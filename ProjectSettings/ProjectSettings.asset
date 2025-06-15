@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 26
-  productGUID: 329b32e82955cdf49a83380af19adebd
+  productGUID: a7ca8021e4a085b4687e5b0ec7416b00
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -800,14 +800,14 @@ PlayerSettings:
     Standalone: 3
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: WavesOBlood
+  metroPackageName: WavesOfBlood
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: WavesOBlood
+  metroApplicationDescription: WavesOfBlood
   wsaImages: {}
   metroTileShortName: 
   metroTileShowName: 0
@@ -879,7 +879,7 @@ PlayerSettings:
   cloudProjectId: bdd31027-64fb-4780-8e86-8496f6443c77
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: WavesOBlood
+  projectName: 
   organizationId: unity_uoe_jblcrsyatg
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 1
