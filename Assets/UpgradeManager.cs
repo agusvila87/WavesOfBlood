@@ -56,21 +56,10 @@ public class UpgradeManager : MonoBehaviour
         upgradePanel.SetActive(false);
         Time.timeScale = 1f;
 
-        StartCoroutine(CountdownAndStartNextWave());
-    }
-
-    private IEnumerator CountdownAndStartNextWave()
-    {
-        float timer = 10f;
-        while (timer > 0)
-        {
-            GameManagerWaves.Instance.waveUI?.UpdateNextWaveTimer(timer);
-            timer -= Time.unscaledDeltaTime;
-            yield return null;
-        }
-
+        // Solo iniciamos la próxima oleada directamente
         GameManagerWaves.Instance.StartCoroutine(GameManagerWaves.Instance.StartNextWave());
     }
+
 
     private void ApplyUpgrade(UpgradeType type)
     {
