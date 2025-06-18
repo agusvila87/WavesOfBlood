@@ -606,9 +606,16 @@ MonoBehaviour:
   HotbarInventoryName: 
   InventoryTransform: {fileID: 0}
   WeaponRotationMode: 0
-  AutoPickItems: []
+  AutoPickItems:
+  - Item: {fileID: 11400000, guid: 18fd79c01a89baa41adc7121820387a5, type: 2}
+    Quantity: 1
+  - Item: {fileID: 11400000, guid: 787c6f5d2747db548ae8ea57ad568e8d, type: 2}
+    Quantity: 1
+  - Item: {fileID: 11400000, guid: f2136121b9e4d3f48a960f42a5c24d33, type: 2}
+    Quantity: 1
   AutoPickOnlyIfMainInventoryIsEmpty: 0
-  AutoEquipWeaponOnStart: {fileID: 0}
+  AutoEquipWeaponOnStart: {fileID: 11400000, guid: 18fd79c01a89baa41adc7121820387a5,
+    type: 2}
   AutoEquipOnlyIfMainInventoryIsEmpty: 0
   AutoEquipOnlyIfEquipmentInventoryIsEmpty: 0
   AutoEquipOnRespawn: 1
