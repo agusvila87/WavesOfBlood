@@ -47,7 +47,10 @@ namespace MoreMountains.TopDownEngine
 		[Tooltip("whether or not the time between uses can be interrupted by releasing the shoot button (if true, releasing the button will cancel the time between uses)")]
 		public bool TimeBetweenUsesReleaseInterruption = true;
 
-		[Header("Burst Mode")] 
+		[Header("Multiplicador de Daño")]
+		public float DamageMultiplier = 1f;
+
+        [Header("Burst Mode")] 
 		/// if this is true, the weapon will activate repeatedly for every shoot request
 		[Tooltip("if this is true, the weapon will activate repeatedly for every shoot request")]
 		public bool UseBurstMode = false;

@@ -36,7 +36,8 @@ namespace MoreMountains.TopDownEngine
 		[Tooltip("the layer to consider as obstacles (will prevent movement)")]
 		public LayerMask ObstaclesLayerMask = LayerManager.ObstaclesLayerMask;
 
-		public Vector2 ColliderSize
+
+        public Vector2 ColliderSize
 		{
 			get
 			{

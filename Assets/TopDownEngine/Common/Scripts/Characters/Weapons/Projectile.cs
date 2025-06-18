@@ -92,13 +92,20 @@ namespace MoreMountains.TopDownEngine
 			_initialInvulnerabilityDurationWFS = new WaitForSeconds (InitialInvulnerabilityDuration);
 			if (_spriteRenderer != null) {	_initialFlipX = _spriteRenderer.flipX ;		}
 			_initialLocalScale = transform.localScale;
-		}
 
-		/// <summary>
-		/// Handles the projectile's initial invincibility
-		/// </summary>
-		/// <returns>The invulnerability.</returns>
-		protected virtual IEnumerator InitialInvulnerability()
+            if (_damageOnTouch != null)
+            {
+                _baseMinDamage = _damageOnTouch.MinDamageCaused;
+                _baseMaxDamage = _damageOnTouch.MaxDamageCaused;
+            }
+
+        }
+
+        /// <summary>
+        /// Handles the projectile's initial invincibility
+        /// </summary>
+        /// <returns>The invulnerability.</returns>
+        protected virtual IEnumerator InitialInvulnerability()
 		{
 			if (_damageOnTouch == null) { yield break; }
 			if (_weapon == null) { yield break; }
@@ -243,20 +250,34 @@ namespace MoreMountains.TopDownEngine
 			}
 		}
 
-		/// <summary>
-		/// Sets the projectile's parent weapon.
-		/// </summary>
-		/// <param name="newWeapon">New weapon.</param>
-		public virtual void SetWeapon(Weapon newWeapon)
-		{
-			_weapon = newWeapon;
-		}
+        /// <summary>
+        /// Sets the projectile's parent weapon.
+        /// </summary>
+        /// <param name="newWeapon">New weapon.</param>
+		/// 
+		protected float _baseMinDamage;
+        protected float _baseMaxDamage;
+        protected bool _damageInitialized = false;
 
-		/// <summary>
-		/// Sets the damage caused by the projectile's DamageOnTouch to the specified value
-		/// </summary>
-		/// <param name="newDamage"></param>
-		public virtual void SetDamage(float minDamage, float maxDamage)
+        public virtual void SetWeapon(Weapon newWeapon)
+        {
+            _weapon = newWeapon;
+            if (_damageOnTouch != null && _weapon != null)
+            {
+                float multiplier = _weapon.DamageMultiplier;
+
+                // Usamos siempre los valores originales, no los ya escalados
+                _damageOnTouch.MinDamageCaused = _baseMinDamage * multiplier;
+                _damageOnTouch.MaxDamageCaused = _baseMaxDamage * multiplier;
+            }
+        }
+
+
+        /// <summary>
+        /// Sets the damage caused by the projectile's DamageOnTouch to the specified value
+        /// </summary>
+        /// <param name="newDamage"></param>
+        public virtual void SetDamage(float minDamage, float maxDamage)
 		{
 			if (_damageOnTouch != null)
 			{

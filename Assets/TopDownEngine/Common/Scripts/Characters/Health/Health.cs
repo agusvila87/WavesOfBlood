@@ -968,14 +968,25 @@ namespace MoreMountains.TopDownEngine
 			}
 		}
 
-		#region HealthManipulationAPIs
-		
+        public void IncreaseMaxHealth(float amount)
+        {
+            MaximumHealth += amount;
+            CurrentHealth += amount; // opcional: curar el extra
+            if (CurrentHealth > MaximumHealth)
+            {
+                CurrentHealth = MaximumHealth;
+            }
+        }
 
-		/// <summary>
-		/// Sets the current health to the specified new value, and updates the health bar
-		/// </summary>
-		/// <param name="newValue"></param>
-		public virtual void SetHealth(float newValue)
+
+        #region HealthManipulationAPIs
+
+
+        /// <summary>
+        /// Sets the current health to the specified new value, and updates the health bar
+        /// </summary>
+        /// <param name="newValue"></param>
+        public virtual void SetHealth(float newValue)
 		{
 			CurrentHealth = newValue;
 			UpdateHealthBar(false);
