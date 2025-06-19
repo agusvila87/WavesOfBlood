@@ -33,6 +33,7 @@ public class UpgradeManager : MonoBehaviour
 
     public void ShowUpgradeOptions()
     {
+        GameManagerWaves.Instance.CleanupHealthPickups();
         Time.timeScale = 0f; // pausa el juego durante la elección
         upgradePanel.SetActive(true);
 
@@ -56,9 +57,11 @@ public class UpgradeManager : MonoBehaviour
         upgradePanel.SetActive(false);
         Time.timeScale = 1f;
 
-        // Solo iniciamos la próxima oleada directamente
+        GameManagerWaves.Instance.SpawnHealthPickups(); // 🟢 Spawnea pickups ahora
+
         GameManagerWaves.Instance.StartCoroutine(GameManagerWaves.Instance.StartNextWave());
     }
+
 
 
     private void ApplyUpgrade(UpgradeType type)

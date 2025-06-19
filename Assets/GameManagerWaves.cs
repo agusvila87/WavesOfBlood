@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using MoreMountains.TopDownEngine;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -21,6 +22,15 @@ public class GameManagerWaves : MonoBehaviour
 
     [HideInInspector] public int aliveEnemies = 0;
 
+    [Header("Life Pickups")]
+    public GameObject healthPickupPrefab;
+    public Transform[] healthSpawnPoints; // puntos fijos definidos desde el editor
+
+    [Header("Player")]
+    public Health playerHealth; // asignás el componente Health del jugador
+
+    private List<GameObject> spawnedHealthPickups = new List<GameObject>();
+
     private void Awake()
     {
         if (Instance == null) Instance = this;
@@ -30,6 +40,7 @@ public class GameManagerWaves : MonoBehaviour
     private void Start()
     {
         StartCoroutine(StartNextWave());
+        StartCoroutine(FindPlayerHealth());
     }
 
     public IEnumerator StartNextWave()
@@ -46,20 +57,23 @@ public class GameManagerWaves : MonoBehaviour
             yield return null;
         }
 
+
+
         aliveEnemies = enemiesPerWave;
         enemySpawner.SpawnWave(currentWave, enemiesPerWave);
     }
+
 
     public void EnemyDied()
     {
         aliveEnemies--;
         AddScore(scorePerKill);
-
         if (aliveEnemies <= 0)
         {
             currentWave++;
             enemiesPerWave += 2;
             TriggerUpgradePhase(); // acá se pausa y espera decisión
+
         }
     }
 
@@ -81,6 +95,80 @@ public class GameManagerWaves : MonoBehaviour
         currentWave = 1;
         enemiesPerWave = 5;
         StartCoroutine(StartNextWave());
+    }
+
+    public void SpawnHealthPickups()
+    {
+        if (healthPickupPrefab == null || healthSpawnPoints.Length == 0 || playerHealth == null) return;
+
+        float healthPercent = playerHealth.CurrentHealth / playerHealth.MaximumHealth;
+        int totalPoints = healthSpawnPoints.Length;
+        int pickupsToSpawn;
+
+        if (healthPercent > 0.75f)
+        {
+            pickupsToSpawn = 1;
+        }
+        else if (healthPercent > 0.5f)
+        {
+            pickupsToSpawn = Mathf.CeilToInt(totalPoints * 0.25f);
+        }
+        else if (healthPercent > 0.15f)
+        {
+            pickupsToSpawn = Mathf.CeilToInt(totalPoints * 0.5f);
+        }
+        else
+        {
+            pickupsToSpawn = totalPoints;
+        }
+
+        CleanupHealthPickups(); // Limpiar anteriores
+
+        List<int> availableIndices = new List<int>();
+        for (int i = 0; i < totalPoints; i++) availableIndices.Add(i);
+
+        for (int i = 0; i < pickupsToSpawn; i++)
+        {
+            int randomIndex = Random.Range(0, availableIndices.Count);
+            int spawnIndex = availableIndices[randomIndex];
+            availableIndices.RemoveAt(randomIndex);
+
+            GameObject pickup = Instantiate(healthPickupPrefab, healthSpawnPoints[spawnIndex].position, Quaternion.identity);
+            spawnedHealthPickups.Add(pickup);
+        }
+    }
+
+    public void CleanupHealthPickups()
+    {
+        foreach (var pickup in spawnedHealthPickups)
+        {
+            if (pickup != null)
+            {
+                Destroy(pickup);
+            }
+        }
+
+        spawnedHealthPickups.Clear();
+    }
+
+
+
+    private IEnumerator FindPlayerHealth()
+    {
+        // Esperamos un frame para asegurarnos que el LevelManager ya instanció al jugador
+        yield return null;
+
+        // Buscamos al jugador por tag
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        if (player != null)
+        {
+            playerHealth = player.GetComponent<Health>();
+        }
+
+        if (playerHealth == null)
+        {
+            Debug.LogWarning("No se pudo encontrar el componente Health del jugador.");
+        }
     }
 
 
