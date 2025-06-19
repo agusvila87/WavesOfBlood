@@ -36,7 +36,7 @@ public class EnemyDeathHandler : MonoBehaviour
 
     private void TryDropAmmo(int wave)
     {
-        if (wave < 5) return; // solo a partir de la ronda 5
+        if (wave < 3) return; // solo a partir de la ronda 5
 
         if (Random.value <= dropChance)
         {
