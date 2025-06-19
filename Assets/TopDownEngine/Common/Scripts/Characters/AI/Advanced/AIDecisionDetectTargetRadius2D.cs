@@ -82,20 +82,26 @@ namespace MoreMountains.TopDownEngine
 			_results = new Collider2D[OverlapMaximum];
 		}
 
-		/// <summary>
-		/// On Decide we check for our target
-		/// </summary>
-		/// <returns></returns>
-		public override bool Decide()
-		{
-			return DetectTarget();
-		}
+        /// <summary>
+        /// On Decide we check for our target
+        /// </summary>
+        public override bool Decide()
+        {
+            if (IsDangerAhead())
+            {
+                // si hay una zona peligrosa adelante, no detectar el target
+                return false;
+            }
 
-		/// <summary>
-		/// Returns true if a target is found within the circle
-		/// </summary>
-		/// <returns></returns>
-		protected virtual bool DetectTarget()
+            return DetectTarget();
+        }
+
+
+        /// <summary>
+        /// Returns true if a target is found within the circle
+        /// </summary>
+        /// <returns></returns>
+        protected virtual bool DetectTarget()
 		{
 			// we check if there's a need to detect a new target
 			if (Time.time - _lastTargetCheckTimestamp < TargetCheckFrequency)
