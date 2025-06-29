@@ -1,20 +1,24 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class RollingCredits : MonoBehaviour
 {
     public RectTransform panelTransform;
-    public Vector2 targetPosition;
     public float moveDuration = 11f;
 
     void Start()
     {
-        StartCoroutine(RollCredits());
+        // Calcula la posición final: su posición inicial + la altura del panel + altura de pantalla
+        float startY = panelTransform.anchoredPosition.y;
+        float panelHeight = panelTransform.rect.height;
+        float screenHeight = ((RectTransform)panelTransform.parent).rect.height;
+        float endY = startY + panelHeight + screenHeight;
+
+        StartCoroutine(RollCredits(new Vector2(panelTransform.anchoredPosition.x, endY)));
     }
 
-    IEnumerator RollCredits()
+    IEnumerator RollCredits(Vector2 targetPosition)
     {
         float elapsedTime = 0f;
         Vector2 initialPosition = panelTransform.anchoredPosition;
@@ -25,17 +29,15 @@ public class RollingCredits : MonoBehaviour
             panelTransform.anchoredPosition = Vector2.Lerp(initialPosition, targetPosition, t);
 
             elapsedTime += Time.deltaTime;
-
             yield return null;
         }
 
+        // Asegura que termine exactamente en target
         panelTransform.anchoredPosition = targetPosition;
-
-        CreditsEnd();
     }
 
-    void CreditsEnd()
+    public void MainMenu()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("MainMenu");
     }
 }
