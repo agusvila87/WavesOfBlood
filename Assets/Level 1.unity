@@ -25459,6 +25459,226 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114131457630152870, guid: b6993e89d9af3f64182a41c77cf345c2,
+        type: 3}
+      propertyPath: BarTarget
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114131457630152870, guid: b6993e89d9af3f64182a41c77cf345c2,
+        type: 3}
+      propertyPath: BarProgress
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114131457630152870, guid: b6993e89d9af3f64182a41c77cf345c2,
+        type: 3}
+      propertyPath: BumpColor.b
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114131457630152870, guid: b6993e89d9af3f64182a41c77cf345c2,
+        type: 3}
+      propertyPath: BumpColor.g
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114131457630152870, guid: b6993e89d9af3f64182a41c77cf345c2,
+        type: 3}
+      propertyPath: BumpColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114131457630152870, guid: b6993e89d9af3f64182a41c77cf345c2,
+        type: 3}
+      propertyPath: BumpDuration
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114131457630152870, guid: b6993e89d9af3f64182a41c77cf345c2,
+        type: 3}
+      propertyPath: BumpOnDecrease
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114131457630152870, guid: b6993e89d9af3f64182a41c77cf345c2,
+        type: 3}
+      propertyPath: BumpOnIncrease
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114131457630152870, guid: b6993e89d9af3f64182a41c77cf345c2,
+        type: 3}
+      propertyPath: BumpScaleOnChange
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114131457630152870, guid: b6993e89d9af3f64182a41c77cf345c2,
+        type: 3}
+      propertyPath: ChangeColorWhenBumping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114131457630152870, guid: b6993e89d9af3f64182a41c77cf345c2,
+        type: 3}
+      propertyPath: ApplyBumpIntensityMultiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114131457630152870, guid: b6993e89d9af3f64182a41c77cf345c2,
+        type: 3}
+      propertyPath: DelayedBarDecreasingProgress
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114131457630152870, guid: b6993e89d9af3f64182a41c77cf345c2,
+        type: 3}
+      propertyPath: DelayedBarIncreasingProgress
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114131457630152870, guid: b6993e89d9af3f64182a41c77cf345c2,
+        type: 3}
+      propertyPath: BumpIntensityMultiplier.m_Curve.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114131457630152870, guid: b6993e89d9af3f64182a41c77cf345c2,
+        type: 3}
+      propertyPath: BumpColorAnimationCurve.m_Curve.Array.data[0].time
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114131457630152870, guid: b6993e89d9af3f64182a41c77cf345c2,
+        type: 3}
+      propertyPath: BumpColorAnimationCurve.m_Curve.Array.data[1].time
+      value: 0.050815254
+      objectReference: {fileID: 0}
+    - target: {fileID: 114131457630152870, guid: b6993e89d9af3f64182a41c77cf345c2,
+        type: 3}
+      propertyPath: BumpColorAnimationCurve.m_Curve.Array.data[2].time
+      value: 0.22455016
+      objectReference: {fileID: 0}
+    - target: {fileID: 114131457630152870, guid: b6993e89d9af3f64182a41c77cf345c2,
+        type: 3}
+      propertyPath: BumpIntensityMultiplier.m_Curve.Array.data[0].time
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114131457630152870, guid: b6993e89d9af3f64182a41c77cf345c2,
+        type: 3}
+      propertyPath: BumpIntensityMultiplier.m_Curve.Array.data[1].time
+      value: 0.9954834
+      objectReference: {fileID: 0}
+    - target: {fileID: 114131457630152870, guid: b6993e89d9af3f64182a41c77cf345c2,
+        type: 3}
+      propertyPath: BumpIntensityMultiplier.m_Curve.Array.data[2].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114131457630152870, guid: b6993e89d9af3f64182a41c77cf345c2,
+        type: 3}
+      propertyPath: BumpColorAnimationCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114131457630152870, guid: b6993e89d9af3f64182a41c77cf345c2,
+        type: 3}
+      propertyPath: BumpColorAnimationCurve.m_Curve.Array.data[1].value
+      value: 0.32986206
+      objectReference: {fileID: 0}
+    - target: {fileID: 114131457630152870, guid: b6993e89d9af3f64182a41c77cf345c2,
+        type: 3}
+      propertyPath: BumpColorAnimationCurve.m_Curve.Array.data[2].value
+      value: 0.34175795
+      objectReference: {fileID: 0}
+    - target: {fileID: 114131457630152870, guid: b6993e89d9af3f64182a41c77cf345c2,
+        type: 3}
+      propertyPath: BumpIntensityMultiplier.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114131457630152870, guid: b6993e89d9af3f64182a41c77cf345c2,
+        type: 3}
+      propertyPath: BumpIntensityMultiplier.m_Curve.Array.data[1].value
+      value: 1.0502319
+      objectReference: {fileID: 0}
+    - target: {fileID: 114131457630152870, guid: b6993e89d9af3f64182a41c77cf345c2,
+        type: 3}
+      propertyPath: BumpIntensityMultiplier.m_Curve.Array.data[2].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114131457630152870, guid: b6993e89d9af3f64182a41c77cf345c2,
+        type: 3}
+      propertyPath: BumpColorAnimationCurve.m_Curve.Array.data[1].inSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114131457630152870, guid: b6993e89d9af3f64182a41c77cf345c2,
+        type: 3}
+      propertyPath: BumpColorAnimationCurve.m_Curve.Array.data[2].inSlope
+      value: 0.043478023
+      objectReference: {fileID: 0}
+    - target: {fileID: 114131457630152870, guid: b6993e89d9af3f64182a41c77cf345c2,
+        type: 3}
+      propertyPath: BumpIntensityMultiplier.m_Curve.Array.data[0].inSlope
+      value: 0.05045984
+      objectReference: {fileID: 0}
+    - target: {fileID: 114131457630152870, guid: b6993e89d9af3f64182a41c77cf345c2,
+        type: 3}
+      propertyPath: BumpIntensityMultiplier.m_Curve.Array.data[1].inSlope
+      value: 0.05045984
+      objectReference: {fileID: 0}
+    - target: {fileID: 114131457630152870, guid: b6993e89d9af3f64182a41c77cf345c2,
+        type: 3}
+      propertyPath: BumpColorAnimationCurve.m_Curve.Array.data[0].inWeight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114131457630152870, guid: b6993e89d9af3f64182a41c77cf345c2,
+        type: 3}
+      propertyPath: BumpColorAnimationCurve.m_Curve.Array.data[1].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 114131457630152870, guid: b6993e89d9af3f64182a41c77cf345c2,
+        type: 3}
+      propertyPath: BumpColorAnimationCurve.m_Curve.Array.data[1].outSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114131457630152870, guid: b6993e89d9af3f64182a41c77cf345c2,
+        type: 3}
+      propertyPath: BumpColorAnimationCurve.m_Curve.Array.data[2].outSlope
+      value: 0.043478023
+      objectReference: {fileID: 0}
+    - target: {fileID: 114131457630152870, guid: b6993e89d9af3f64182a41c77cf345c2,
+        type: 3}
+      propertyPath: BumpIntensityMultiplier.m_Curve.Array.data[0].outSlope
+      value: 0.05045984
+      objectReference: {fileID: 0}
+    - target: {fileID: 114131457630152870, guid: b6993e89d9af3f64182a41c77cf345c2,
+        type: 3}
+      propertyPath: BumpIntensityMultiplier.m_Curve.Array.data[1].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 114131457630152870, guid: b6993e89d9af3f64182a41c77cf345c2,
+        type: 3}
+      propertyPath: BumpIntensityMultiplier.m_Curve.Array.data[1].outSlope
+      value: 0.05045984
+      objectReference: {fileID: 0}
+    - target: {fileID: 114131457630152870, guid: b6993e89d9af3f64182a41c77cf345c2,
+        type: 3}
+      propertyPath: BumpColorAnimationCurve.m_Curve.Array.data[0].outWeight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114131457630152870, guid: b6993e89d9af3f64182a41c77cf345c2,
+        type: 3}
+      propertyPath: BumpColorAnimationCurve.m_Curve.Array.data[1].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 114131457630152870, guid: b6993e89d9af3f64182a41c77cf345c2,
+        type: 3}
+      propertyPath: BumpColorAnimationCurve.m_Curve.Array.data[2].outWeight
+      value: 0.18326977
+      objectReference: {fileID: 0}
+    - target: {fileID: 114131457630152870, guid: b6993e89d9af3f64182a41c77cf345c2,
+        type: 3}
+      propertyPath: BumpIntensityMultiplier.m_Curve.Array.data[0].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 114131457630152870, guid: b6993e89d9af3f64182a41c77cf345c2,
+        type: 3}
+      propertyPath: BumpIntensityMultiplier.m_Curve.Array.data[1].outWeight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114131457630152870, guid: b6993e89d9af3f64182a41c77cf345c2,
+        type: 3}
+      propertyPath: BumpIntensityMultiplier.m_Curve.Array.data[0].tangentMode
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 114131457630152870, guid: b6993e89d9af3f64182a41c77cf345c2,
+        type: 3}
+      propertyPath: BumpIntensityMultiplier.m_Curve.Array.data[1].tangentMode
+      value: 34
+      objectReference: {fileID: 0}
     - target: {fileID: 114546976258212234, guid: b6993e89d9af3f64182a41c77cf345c2,
         type: 3}
       propertyPath: m_Text
@@ -25499,6 +25719,21 @@ PrefabInstance:
       propertyPath: ButtonPressedFirstTime.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 114703457108765924, guid: b6993e89d9af3f64182a41c77cf345c2,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114703457108765924, guid: b6993e89d9af3f64182a41c77cf345c2,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114703457108765924, guid: b6993e89d9af3f64182a41c77cf345c2,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 114817600616216162, guid: b6993e89d9af3f64182a41c77cf345c2,
         type: 3}
       propertyPath: m_Text
@@ -25528,6 +25763,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.x
       value: 367.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 224053040552351924, guid: b6993e89d9af3f64182a41c77cf345c2,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224053040552351924, guid: b6993e89d9af3f64182a41c77cf345c2,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224053040552351924, guid: b6993e89d9af3f64182a41c77cf345c2,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224053040552351924, guid: b6993e89d9af3f64182a41c77cf345c2,
         type: 3}
@@ -26153,6 +26403,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 18.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 224623359100494116, guid: b6993e89d9af3f64182a41c77cf345c2,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224623359100494116, guid: b6993e89d9af3f64182a41c77cf345c2,
         type: 3}
