@@ -4799,7 +4799,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 2b93188a6f7a3824ebbe3e81e9795f24, type: 2}
-  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4925,7 +4924,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 47421343
   m_SortingLayer: 4
-  m_SortingOrder: 5
+  m_SortingOrder: 6
   m_Sprite: {fileID: 21300002, guid: 75df1bb8b302ceb4a9230d70d1b2e97e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5053,7 +5052,7 @@ MonoBehaviour:
   InitializeOnStart: 1
   Interruptable: 0
   Flipped: 0
-  ProjectileSpawnOffset: {x: 1.98, y: 0.07, z: 0}
+  ProjectileSpawnOffset: {x: 0, y: 0, z: 0}
   DefaultProjectileDirection: {x: 0, y: 0, z: 1}
   ProjectilesPerShot: 1
   SpawnTransforms: []
@@ -5061,7 +5060,7 @@ MonoBehaviour:
   Spread: {x: 0, y: 0, z: 2}
   RotateWeaponOnSpread: 1
   RandomSpread: 1
-  SpawnPosition: {x: -77.82569, y: 3.6703556, z: 0}
+  SpawnPosition: {x: 0.989, y: -1.9296442, z: 0}
   ObjectPooler: {fileID: 0}
   SpawnFeedbacks: []
   TestShootButton: 0
@@ -5130,7 +5129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Threshold: 0
   BelowThresholdSortingOrder: 1
-  AboveThresholdSortingOrder: -1
+  AboveThresholdSortingOrder: 1
   Sprite: {fileID: 484165562720948376}
 --- !u!114 &9129425136690637843
 MonoBehaviour:
@@ -15586,7 +15585,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 9b17c29256d753747b302396bf08554e, type: 2}
-  - {fileID: 2100000, guid: d4cd643376433c14a89d978020e035ec, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -15665,7 +15663,7 @@ Transform:
   m_GameObject: {fileID: 6737858069429003719}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.181, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -21337,7 +21335,6 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0

@@ -14983,7 +14983,7 @@ Transform:
   m_GameObject: {fileID: 1614150050602732}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.384, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -19979,7 +19979,7 @@ MonoBehaviour:
   InitializeOnStart: 1
   Interruptable: 0
   Flipped: 0
-  ProjectileSpawnOffset: {x: 2.47, y: 0.12, z: 0}
+  ProjectileSpawnOffset: {x: 0, y: 0, z: 0}
   DefaultProjectileDirection: {x: 0, y: 0, z: 1}
   ProjectilesPerShot: 5
   SpawnTransforms: []
@@ -19987,7 +19987,7 @@ MonoBehaviour:
   Spread: {x: 0, y: 0, z: 10}
   RotateWeaponOnSpread: 0
   RandomSpread: 0
-  SpawnPosition: {x: -0.53, y: -2.8820002, z: 0}
+  SpawnPosition: {x: -3, y: -3.002, z: 0}
   ObjectPooler: {fileID: 0}
   SpawnFeedbacks: []
   TestShootButton: 0
@@ -20056,7 +20056,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Threshold: 0
   BelowThresholdSortingOrder: 1
-  AboveThresholdSortingOrder: -1
+  AboveThresholdSortingOrder: 1
   Sprite: {fileID: 212863733488835940}
 --- !u!1 &6198786116681056334
 GameObject:
