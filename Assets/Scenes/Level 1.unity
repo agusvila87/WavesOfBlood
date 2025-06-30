@@ -13706,6 +13706,11 @@ MonoBehaviour:
     PoolSize: 30
     PoolCanExpand: 1
     Enabled: 1
+  - GameObjectToPool: {fileID: 7217484439004265132, guid: f00dea1136b91c64486ed62067f7f62b,
+      type: 3}
+    PoolSize: 30
+    PoolCanExpand: 1
+    Enabled: 1
   PoolingMethod: 3
   CanPoolSameObjectTwice: 1
   MutualizedPoolName: 
@@ -14669,6 +14674,72 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 674704644}
   m_CullTransparentMesh: 0
+--- !u!1001 &678237281
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1561694053617324, guid: 264f08f7691274a4c81a3318db50bac1, type: 3}
+      propertyPath: m_Name
+      value: KoalaNinja (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1561694053617324, guid: 264f08f7691274a4c81a3318db50bac1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4736116768674126, guid: 264f08f7691274a4c81a3318db50bac1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 56.25375
+      objectReference: {fileID: 0}
+    - target: {fileID: 4736116768674126, guid: 264f08f7691274a4c81a3318db50bac1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -28.571335
+      objectReference: {fileID: 0}
+    - target: {fileID: 4736116768674126, guid: 264f08f7691274a4c81a3318db50bac1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4736116768674126, guid: 264f08f7691274a4c81a3318db50bac1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4736116768674126, guid: 264f08f7691274a4c81a3318db50bac1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4736116768674126, guid: 264f08f7691274a4c81a3318db50bac1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4736116768674126, guid: 264f08f7691274a4c81a3318db50bac1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4736116768674126, guid: 264f08f7691274a4c81a3318db50bac1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4736116768674126, guid: 264f08f7691274a4c81a3318db50bac1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4736116768674126, guid: 264f08f7691274a4c81a3318db50bac1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7719002209275833114, guid: 264f08f7691274a4c81a3318db50bac1,
+        type: 3}
+      propertyPath: TriggerFilter
+      value: 195
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 264f08f7691274a4c81a3318db50bac1, type: 3}
 --- !u!1001 &682374609
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -55216,6 +55287,79 @@ MonoBehaviour:
         RemapColorZero: 0
         RemapColorOne: 1
         TargetColor: {r: 1, g: 0, b: 0, a: 1}
+--- !u!1001 &3928859725886477527
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7217484439004265132, guid: f00dea1136b91c64486ed62067f7f62b,
+        type: 3}
+      propertyPath: m_Name
+      value: KoalaNinjaRifleman
+      objectReference: {fileID: 0}
+    - target: {fileID: 7217484439004265132, guid: f00dea1136b91c64486ed62067f7f62b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8658898862005948061, guid: f00dea1136b91c64486ed62067f7f62b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 54.25085
+      objectReference: {fileID: 0}
+    - target: {fileID: 8658898862005948061, guid: f00dea1136b91c64486ed62067f7f62b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -28.905151
+      objectReference: {fileID: 0}
+    - target: {fileID: 8658898862005948061, guid: f00dea1136b91c64486ed62067f7f62b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8658898862005948061, guid: f00dea1136b91c64486ed62067f7f62b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8658898862005948061, guid: f00dea1136b91c64486ed62067f7f62b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8658898862005948061, guid: f00dea1136b91c64486ed62067f7f62b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8658898862005948061, guid: f00dea1136b91c64486ed62067f7f62b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8658898862005948061, guid: f00dea1136b91c64486ed62067f7f62b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8658898862005948061, guid: f00dea1136b91c64486ed62067f7f62b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8658898862005948061, guid: f00dea1136b91c64486ed62067f7f62b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f00dea1136b91c64486ed62067f7f62b, type: 3}
 --- !u!1 &4408364217972804871
 GameObject:
   m_ObjectHideFlags: 0
@@ -55718,3 +55862,5 @@ SceneRoots:
   - {fileID: 650655110}
   - {fileID: 727352407}
   - {fileID: 1710515350}
+  - {fileID: 3928859725886477527}
+  - {fileID: 678237281}

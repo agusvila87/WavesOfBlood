@@ -661,6 +661,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Label: 
+  AvoidDangerZone: 0
+  DangerZoneLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  DangerCheckDistance: 1
   Radius: 4
   DetectionOriginOffset: {x: 0, y: 0, z: 0}
   TargetLayer:
@@ -687,6 +692,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Label: 
+  AvoidDangerZone: 0
+  DangerZoneLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  DangerCheckDistance: 1
 --- !u!114 &114975401774144254
 MonoBehaviour:
   m_ObjectHideFlags: 0

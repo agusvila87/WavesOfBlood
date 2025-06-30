@@ -283,7 +283,7 @@ MonoBehaviour:
     m_Bits: 32768
   ObstaclesLayerMask:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 16777472
 --- !u!114 &114184945564206620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11119,7 +11119,7 @@ MonoBehaviour:
           ButtonText: 
         Owner: {fileID: 2606192527695501269}
         DebugActive: 0
-        GameObjectToInstantiate: {fileID: 7217599956498176051, guid: e10ba9f46405a0f4ab60874c3abb0214,
+        GameObjectToInstantiate: {fileID: 855813044592279996, guid: 1200e889f6cbc834e9c44199d4616bd4,
           type: 3}
         PositionMode: 0
         AlsoApplyRotation: 0
