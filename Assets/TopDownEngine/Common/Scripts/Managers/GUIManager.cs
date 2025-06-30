@@ -191,6 +191,7 @@ namespace MoreMountains.TopDownEngine
 			if (PauseScreen != null)
 			{
 				PauseScreen.SetActive(state);
+				Debug.Log(state);
 				EventSystem.current.sendNavigationEvents = state;
 			}
 		}

@@ -300,22 +300,22 @@ namespace MoreMountains.TopDownEngine
 		/// Pauses the game or unpauses it depending on the current state
 		/// </summary>
 		public virtual void Pause(PauseMethods pauseMethod = PauseMethods.PauseMenu, bool unpauseIfPaused = true)
-		{	
+		{
 			if ((pauseMethod == PauseMethods.PauseMenu) && _inventoryOpen)
 			{
 				return;
 			}
 
 			// if time is not already stopped		
-			if (Time.timeScale>0.0f)
+			if (Time.timeScale > 0.0f)
 			{
 				MMTimeScaleEvent.Trigger(MMTimeScaleMethods.For, 0f, 0f, false, 0f, true);
-				Instance.Paused=true;
+				Instance.Paused = true;
 				if ((GUIManager.HasInstance) && (pauseMethod == PauseMethods.PauseMenu))
 				{
-					GUIManager.Instance.SetPauseScreen(true);	
+					GUIManager.Instance.SetPauseScreen(true);
 					_pauseMenuOpen = true;
-					SetActiveInventoryInputManager (false);
+					SetActiveInventoryInputManager(false);
 				}
 				if (pauseMethod == PauseMethods.NoPauseMenu)
 				{
@@ -326,16 +326,49 @@ namespace MoreMountains.TopDownEngine
 			{
 				if (unpauseIfPaused)
 				{
-					UnPause(pauseMethod);	
+					UnPause(pauseMethod);
 				}
-			}		
+			}
 			LevelManager.Instance.ToggleCharacterPause();
 		}
-        
-		/// <summary>
-		/// Unpauses the game
-		/// </summary>
-		public virtual void UnPause(PauseMethods pauseMethod = PauseMethods.PauseMenu)
+
+        public virtual void PauseConfirm(PauseMethods pauseMethod = PauseMethods.PauseMenu, bool unpauseIfPaused = true)
+        {
+            if ((pauseMethod == PauseMethods.PauseMenu) && _inventoryOpen)
+            {
+                return;
+            }
+
+            // if time is not already stopped		
+            if (Time.timeScale > 0.0f)
+            {
+                MMTimeScaleEvent.Trigger(MMTimeScaleMethods.For, 0f, 0f, false, 0f, true);
+                Instance.Paused = true;
+                if ((GUIManager.HasInstance) && (pauseMethod == PauseMethods.PauseMenu))
+                {
+                    //GUIManager.Instance.SetPauseScreen(true);
+                    _pauseMenuOpen = true;
+                    SetActiveInventoryInputManager(false);
+                }
+                if (pauseMethod == PauseMethods.NoPauseMenu)
+                {
+                    _inventoryOpen = true;
+                }
+            }
+            else
+            {
+                if (unpauseIfPaused)
+                {
+                    UnPause(pauseMethod);
+                }
+            }
+            LevelManager.Instance.ToggleCharacterPause();
+        }
+
+        /// <summary>
+        /// Unpauses the game
+        /// </summary>
+        public virtual void UnPause(PauseMethods pauseMethod = PauseMethods.PauseMenu)
 		{
 			MMTimeScaleEvent.Trigger(MMTimeScaleMethods.Unfreeze, 1f, 0f, false, 0f, false);
 			Instance.Paused = false;

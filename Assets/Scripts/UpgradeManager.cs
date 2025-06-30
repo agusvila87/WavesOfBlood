@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using MoreMountains.TopDownEngine;
+using UnityEngine.EventSystems;
 
 public class UpgradeManager : MonoBehaviour
 {
@@ -14,11 +15,15 @@ public class UpgradeManager : MonoBehaviour
     public Button option1Button;
     public Button option2Button;
     public Button option3Button;
+    public Button confirmButton;
     public TextMeshProUGUI option1Text;
     public TextMeshProUGUI option2Text;
     public TextMeshProUGUI option3Text;
+    public TextMeshProUGUI confirmButtonText;
 
     public PlayerStats playerStats;
+
+    private UpgradeType? selectedUpgrade = null;
 
     private void Awake()
     {
@@ -29,40 +34,60 @@ public class UpgradeManager : MonoBehaviour
     private void Start()
     {
         upgradePanel.SetActive(false);
+        confirmButton.interactable = false;
     }
 
     public void ShowUpgradeOptions()
     {
         GameManagerWaves.Instance.CleanupHealthPickups();
-        Time.timeScale = 0f; // pausa el juego durante la elección
+        GameManager.Instance.PauseConfirm();
         upgradePanel.SetActive(true);
+        selectedUpgrade = null;
+        confirmButton.interactable = false;
 
-        option1Text.text = "➕ Vida Máxima +20";
-        option2Text.text = "💥 Daño +25%";
-        option3Text.text = "⚡ Dash Cooldown -20%";
+        // Textos de opciones
+        option1Text.text = "Vida Máxima +20";
+        option2Text.text = "Daño +10%";
+        option3Text.text = "Dash Cooldown -20%";
 
+        // Limpiar listeners previos
         option1Button.onClick.RemoveAllListeners();
         option2Button.onClick.RemoveAllListeners();
         option3Button.onClick.RemoveAllListeners();
+        confirmButton.onClick.RemoveAllListeners();
 
-        option1Button.onClick.AddListener(() => SelectUpgrade(UpgradeType.MoreHP));
-        option2Button.onClick.AddListener(() => SelectUpgrade(UpgradeType.MoreDamage));
-        option3Button.onClick.AddListener(() => SelectUpgrade(UpgradeType.FasterDash));
+        // Agregar listeners
+        option1Button.onClick.AddListener(() => SetSelectedUpgrade(UpgradeType.MoreHP));
+        option2Button.onClick.AddListener(() => SetSelectedUpgrade(UpgradeType.MoreDamage));
+        option3Button.onClick.AddListener(() => SetSelectedUpgrade(UpgradeType.FasterDash));
+        confirmButton.onClick.AddListener(() => ConfirmUpgrade());
+    }
+
+    private void SetSelectedUpgrade(UpgradeType type)
+    {
+        selectedUpgrade = type;
+        confirmButton.interactable = true;
+        confirmButtonText.text = $"Opción seleccionada: {type}";
+        // Opcional: feedback visual
+        Debug.Log($"Opción seleccionada: {type}");
+    }
+
+    private void ConfirmUpgrade()
+    {
+        if (!selectedUpgrade.HasValue) return;
+
+        SelectUpgrade(selectedUpgrade.Value);
+        upgradePanel.SetActive(false);
+        GameManager.Instance.UnPause();
+        GameManagerWaves.Instance.SpawnHealthPickups();
+        GameManagerWaves.Instance.StartCoroutine(GameManagerWaves.Instance.StartNextWave());
     }
 
     private void SelectUpgrade(UpgradeType type)
     {
-        Debug.Log($"Upgrade seleccionada: {type}");
+        Debug.Log($"Upgrade confirmada: {type}");
         ApplyUpgrade(type);
-        upgradePanel.SetActive(false);
-        Time.timeScale = 1f;
-
-        GameManagerWaves.Instance.SpawnHealthPickups(); // 🟢 Spawnea pickups ahora
-
-        GameManagerWaves.Instance.StartCoroutine(GameManagerWaves.Instance.StartNextWave());
     }
-
-
 
     private void ApplyUpgrade(UpgradeType type)
     {
@@ -83,7 +108,7 @@ public class UpgradeManager : MonoBehaviour
                 var weapons = player.GetComponentsInChildren<Weapon>();
                 foreach (var weapon in weapons)
                 {
-                    weapon.DamageMultiplier += 0.25f;
+                    weapon.DamageMultiplier += 0.10f;
                     weapon.DamageMultiplier = Mathf.Clamp(weapon.DamageMultiplier, 1f, 5f);
                 }
                 break;
@@ -96,7 +121,6 @@ public class UpgradeManager : MonoBehaviour
                     dash.Cooldown.ConsumptionDuration = Mathf.Max(dash.Cooldown.ConsumptionDuration, 0.2f);
                 }
                 break;
-
         }
     }
 
