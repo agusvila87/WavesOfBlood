@@ -56,6 +56,7 @@ GameObject:
   - component: {fileID: 114654745524214770}
   - component: {fileID: 114704504716019314}
   - component: {fileID: 6078255015324811434}
+  - component: {fileID: -5812915246146729000}
   m_Layer: 10
   m_Name: MinimalCharacter2D
   m_TagString: Player
@@ -626,6 +627,28 @@ MonoBehaviour:
   DashFeedback: {fileID: 4057906749240143122}
   TargetDamageOnTouch: {fileID: 2884011952158349956}
   DashCooldownImage: {fileID: 4532085114482136758}
+--- !u!114 &-5812915246146729000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1790328835693532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed8c17a9a9fed854daff1f08f315ad69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AbilityStartSfx: {fileID: 0}
+  AbilityInProgressSfx: {fileID: 0}
+  AbilityStopSfx: {fileID: 0}
+  AbilityStartFeedbacks: {fileID: 0}
+  AbilityStopFeedbacks: {fileID: 0}
+  AbilityPermitted: 1
+  BlockingMovementStates: 
+  BlockingConditionStates: 
+  BlockingWeaponStates: 
+  FallingFeedback: {fileID: 3266931662785587250}
 --- !u!1 &1997364199477008
 GameObject:
   m_ObjectHideFlags: 0
