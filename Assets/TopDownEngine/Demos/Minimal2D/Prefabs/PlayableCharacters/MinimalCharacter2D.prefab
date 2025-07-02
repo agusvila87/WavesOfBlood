@@ -12786,7 +12786,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.3
+  m_Radius: 0.5989541
 --- !u!114 &2884011952158349956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12807,7 +12807,7 @@ MonoBehaviour:
   MinDamageCaused: 10000
   MaxDamageCaused: 10000
   TypedDamages: []
-  DamageDirectionMode: 1
+  DamageDirectionMode: 0
   DamageCausedKnockbackType: 1
   DamageCausedKnockbackDirection: 0
   DamageCausedKnockbackForce: {x: 10, y: 10, z: 10}

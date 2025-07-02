@@ -10,6 +10,11 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("Level 1");
     }
 
+    public void PlayTutorial()
+    {
+        SceneManager.LoadScene("Tutorial");
+    }
+
     public void Credits()
     {
         SceneManager.LoadScene("Credits");

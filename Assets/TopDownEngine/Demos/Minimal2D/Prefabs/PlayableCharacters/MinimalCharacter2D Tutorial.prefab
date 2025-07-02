@@ -503,8 +503,7 @@ MonoBehaviour:
   BlockingMovementStates: 
   BlockingConditionStates: 
   BlockingWeaponStates: 
-  InitialWeapon: {fileID: 5714866172660147214, guid: 34025c1e2da9b124c8c563d85778e280,
-    type: 3}
+  InitialWeapon: {fileID: 0}
   CanPickupWeapons: 1
   WeaponUseFeedback: {fileID: 0}
   WeaponAttachment: {fileID: 4539632890920534}
@@ -550,16 +549,9 @@ MonoBehaviour:
   HotbarInventoryName: 
   InventoryTransform: {fileID: 0}
   WeaponRotationMode: 0
-  AutoPickItems:
-  - Item: {fileID: 11400000, guid: 18fd79c01a89baa41adc7121820387a5, type: 2}
-    Quantity: 1
-  - Item: {fileID: 11400000, guid: 787c6f5d2747db548ae8ea57ad568e8d, type: 2}
-    Quantity: 1
-  - Item: {fileID: 11400000, guid: f2136121b9e4d3f48a960f42a5c24d33, type: 2}
-    Quantity: 1
+  AutoPickItems: []
   AutoPickOnlyIfMainInventoryIsEmpty: 0
-  AutoEquipWeaponOnStart: {fileID: 11400000, guid: 18fd79c01a89baa41adc7121820387a5,
-    type: 2}
+  AutoEquipWeaponOnStart: {fileID: 0}
   AutoEquipOnlyIfMainInventoryIsEmpty: 0
   AutoEquipOnlyIfEquipmentInventoryIsEmpty: 0
   AutoEquipOnRespawn: 1
@@ -12746,7 +12738,7 @@ Transform:
   m_GameObject: {fileID: 6510105696370650203}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.44, z: 0}
+  m_LocalPosition: {x: 0, y: 0.499, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12786,7 +12778,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.3
+  m_Radius: 0.5774478
 --- !u!114 &2884011952158349956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12807,7 +12799,7 @@ MonoBehaviour:
   MinDamageCaused: 10000
   MaxDamageCaused: 10000
   TypedDamages: []
-  DamageDirectionMode: 1
+  DamageDirectionMode: 0
   DamageCausedKnockbackType: 1
   DamageCausedKnockbackDirection: 0
   DamageCausedKnockbackForce: {x: 10, y: 10, z: 10}
