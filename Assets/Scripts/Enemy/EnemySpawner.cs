@@ -7,7 +7,7 @@ public class EnemySpawner : MonoBehaviour
 {
     public static EnemySpawner Instance;
 
-    [Header("Settings")]
+    [Header("Pool & Spawning")]
     public MMMultipleObjectPooler Pooler;
     public List<Transform> spawnPoints;
     public float baseDelayBetweenSpawns = 0.2f;
@@ -20,7 +20,7 @@ public class EnemySpawner : MonoBehaviour
 
     public void SpawnWave(int wave, int totalEnemies)
     {
-        float delay = Mathf.Clamp(baseDelayBetweenSpawns - (wave * 0.01f), 0.005f, baseDelayBetweenSpawns);
+        float delay = Mathf.Clamp(baseDelayBetweenSpawns - (wave * 0.01f), 0.05f, baseDelayBetweenSpawns);
         StartCoroutine(SpawnEnemies(totalEnemies, delay));
     }
 
@@ -33,12 +33,9 @@ public class EnemySpawner : MonoBehaviour
             GameObject enemy = Pooler.GetPooledGameObject();
             if (enemy != null)
             {
-                Vector3 basePos = spawnPoints[spawnIndex].position;
-                Vector2 offset = Random.insideUnitCircle * 1.5f;
-                Vector3 spawnPos = basePos + new Vector3(offset.x, 0f, offset.y);
-
-                enemy.transform.position = spawnPos;
+                Vector3 spawnPos = spawnPoints[spawnIndex].transform.position;
                 enemy.SetActive(true);
+                enemy.transform.position = spawnPos;
             }
 
             spawnIndex = (spawnIndex + 1) % spawnPoints.Count;
