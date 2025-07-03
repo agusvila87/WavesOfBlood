@@ -120,8 +120,14 @@ namespace MoreMountains.TopDownEngine
 			base.Initialization();
 			if (_controller == null)
 			{
-				_controller = this.gameObject.GetComponentInParent<TopDownController>();
-			}
+                _controller = this.gameObject.GetComponentInParent<TopDownController>();
+
+                if (_controller == null)
+                {
+                    Debug.LogError($"{this.name} | CharacterOrientation2D: No se encontró TopDownController en padres.");
+                    return;
+                }
+            }
 			_controller.CurrentDirection = Vector3.zero;
 			_initialized = true;
 			if (InitialFacingDirection == Character.FacingDirections.West)
