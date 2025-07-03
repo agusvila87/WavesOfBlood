@@ -197,7 +197,7 @@ namespace MoreMountains.TopDownEngine
 		/// <param name="status"></param>
 		public virtual void SetGravityActive(bool status)
 		{
-			GravityActive = status;
+			//GravityActive = status;
 		}
 
 		/// <summary>

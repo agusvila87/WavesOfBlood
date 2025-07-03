@@ -772,7 +772,7 @@ namespace MoreMountains.TopDownEngine
 		{
 			if (ConditionState.CurrentState == CharacterStates.CharacterConditions.Frozen)
 			{
-				_controller.SetGravityActive(true);
+				//_controller.SetGravityActive(true);
 				ConditionState.ChangeState(CharacterStates.CharacterConditions.Normal);
 			}
 		}

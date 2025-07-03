@@ -260,7 +260,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Gravity: -30
-  GravityActive: 1
+  GravityActive: 0
   CrouchedRaycastLengthMultiplier: 1
   PerformCardinalObstacleRaycastDetection: 0
   Speed: {x: 0, y: 0, z: 0}

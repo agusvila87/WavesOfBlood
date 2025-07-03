@@ -19247,6 +19247,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114473148523296108, guid: 17f3a99d3c23a6047ac3d789f9cca4b3,
+        type: 3}
+      propertyPath: Quantity
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -24622,6 +24627,11 @@ PrefabInstance:
     - target: {fileID: 4931318258158128, guid: bc97e8a1195155247a295247fe4b7f34, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114510515826865942, guid: bc97e8a1195155247a295247fe4b7f34,
+        type: 3}
+      propertyPath: Quantity
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -30531,7 +30541,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 184.74393, y: 3.2600002}
+  m_AnchoredPosition: {x: 184.74393, y: 3.49}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &988940062
@@ -51322,7 +51332,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Your starting weapon is an <color=yellow>AK-47</color> with infinite ammo. 
-    \r\nPress <color=yellow>Left Click</color> to shoot.\r\n"
+    \r\nPress <color=yellow>Left Click</color> to shoot.  \r\nPress <color=yellow>Q</color>
+    to switch weapons."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ce851e5191cbd4549ab4b294dc11621b, type: 2}
   m_sharedMaterial: {fileID: 4135464725618192302, guid: ce851e5191cbd4549ab4b294dc11621b,
