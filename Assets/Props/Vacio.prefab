@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2044974210400135019}
   - component: {fileID: 3784227772736961046}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DungeonGroundOrange_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6822483120380522811}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Vacio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -179,6 +179,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4148288581707580, guid: bd4827cfe8738db4eb6ca4315945e980, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 61569124511943144, guid: bd4827cfe8738db4eb6ca4315945e980,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61569124511943144, guid: bd4827cfe8738db4eb6ca4315945e980,
+        type: 3}
+      propertyPath: m_UsedByEffector
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
