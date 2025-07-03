@@ -6169,7 +6169,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1653175800}
         m_TargetAssemblyTypeName: QuitGameButton, Assembly-CSharp
-        m_MethodName: QuitGame
+        m_MethodName: BackMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -25215,7 +25215,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: QUIT GAME
+  m_Text: BACK MENU
 --- !u!222 &811992327
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -76619,7 +76619,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2002510492}
         m_TargetAssemblyTypeName: QuitGameButton, Assembly-CSharp
-        m_MethodName: QuitGame
+        m_MethodName: BackMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -78478,7 +78478,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: QUIT GAME
+  m_Text: BACK MENU
 --- !u!114 &114819786261942786
 MonoBehaviour:
   m_ObjectHideFlags: 0

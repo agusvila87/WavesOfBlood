@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &4
 LightmapSettings:
@@ -11716,6 +11715,51 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
+    - target: {fileID: 114044659299794826, guid: 3d2a551cb5b32194898fd8fb30716e53,
+        type: 3}
+      propertyPath: AvoidDangerZone
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114044659299794826, guid: 3d2a551cb5b32194898fd8fb30716e53,
+        type: 3}
+      propertyPath: DangerCheckDistance
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114044659299794826, guid: 3d2a551cb5b32194898fd8fb30716e53,
+        type: 3}
+      propertyPath: DangerZoneLayer.m_Bits
+      value: 32768
+      objectReference: {fileID: 0}
+    - target: {fileID: 114225560325155718, guid: 3d2a551cb5b32194898fd8fb30716e53,
+        type: 3}
+      propertyPath: Radius
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 114225560325155718, guid: 3d2a551cb5b32194898fd8fb30716e53,
+        type: 3}
+      propertyPath: OverlapMaximum
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 114225560325155718, guid: 3d2a551cb5b32194898fd8fb30716e53,
+        type: 3}
+      propertyPath: AvoidDangerZone
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114225560325155718, guid: 3d2a551cb5b32194898fd8fb30716e53,
+        type: 3}
+      propertyPath: DangerCheckDistance
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114225560325155718, guid: 3d2a551cb5b32194898fd8fb30716e53,
+        type: 3}
+      propertyPath: TargetCheckFrequency
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114225560325155718, guid: 3d2a551cb5b32194898fd8fb30716e53,
+        type: 3}
+      propertyPath: DangerZoneLayer.m_Bits
+      value: 32768
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12071,6 +12115,51 @@ PrefabInstance:
     - target: {fileID: 4138335758285898, guid: ad0dbc7c42d9c824e8a0ad2b5bc49bec, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114119721583310078, guid: ad0dbc7c42d9c824e8a0ad2b5bc49bec,
+        type: 3}
+      propertyPath: Radius
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 114119721583310078, guid: ad0dbc7c42d9c824e8a0ad2b5bc49bec,
+        type: 3}
+      propertyPath: OverlapMaximum
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 114119721583310078, guid: ad0dbc7c42d9c824e8a0ad2b5bc49bec,
+        type: 3}
+      propertyPath: AvoidDangerZone
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114119721583310078, guid: ad0dbc7c42d9c824e8a0ad2b5bc49bec,
+        type: 3}
+      propertyPath: DangerCheckDistance
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114119721583310078, guid: ad0dbc7c42d9c824e8a0ad2b5bc49bec,
+        type: 3}
+      propertyPath: TargetCheckFrequency
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114119721583310078, guid: ad0dbc7c42d9c824e8a0ad2b5bc49bec,
+        type: 3}
+      propertyPath: DangerZoneLayer.m_Bits
+      value: 32768
+      objectReference: {fileID: 0}
+    - target: {fileID: 114916003664736000, guid: ad0dbc7c42d9c824e8a0ad2b5bc49bec,
+        type: 3}
+      propertyPath: AvoidDangerZone
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114916003664736000, guid: ad0dbc7c42d9c824e8a0ad2b5bc49bec,
+        type: 3}
+      propertyPath: DangerCheckDistance
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114916003664736000, guid: ad0dbc7c42d9c824e8a0ad2b5bc49bec,
+        type: 3}
+      propertyPath: DangerZoneLayer.m_Bits
+      value: 32768
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12578,6 +12667,51 @@ PrefabInstance:
     - target: {fileID: 4249208751816686, guid: 3d2a551cb5b32194898fd8fb30716e53, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114044659299794826, guid: 3d2a551cb5b32194898fd8fb30716e53,
+        type: 3}
+      propertyPath: AvoidDangerZone
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114044659299794826, guid: 3d2a551cb5b32194898fd8fb30716e53,
+        type: 3}
+      propertyPath: DangerCheckDistance
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114044659299794826, guid: 3d2a551cb5b32194898fd8fb30716e53,
+        type: 3}
+      propertyPath: DangerZoneLayer.m_Bits
+      value: 32768
+      objectReference: {fileID: 0}
+    - target: {fileID: 114225560325155718, guid: 3d2a551cb5b32194898fd8fb30716e53,
+        type: 3}
+      propertyPath: Radius
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 114225560325155718, guid: 3d2a551cb5b32194898fd8fb30716e53,
+        type: 3}
+      propertyPath: OverlapMaximum
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 114225560325155718, guid: 3d2a551cb5b32194898fd8fb30716e53,
+        type: 3}
+      propertyPath: AvoidDangerZone
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114225560325155718, guid: 3d2a551cb5b32194898fd8fb30716e53,
+        type: 3}
+      propertyPath: DangerCheckDistance
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114225560325155718, guid: 3d2a551cb5b32194898fd8fb30716e53,
+        type: 3}
+      propertyPath: TargetCheckFrequency
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114225560325155718, guid: 3d2a551cb5b32194898fd8fb30716e53,
+        type: 3}
+      propertyPath: DangerZoneLayer.m_Bits
+      value: 32768
       objectReference: {fileID: 0}
     - target: {fileID: 114544991609150994, guid: 3d2a551cb5b32194898fd8fb30716e53,
         type: 3}
@@ -29047,6 +29181,51 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
+    - target: {fileID: 114631777180868210, guid: 89e8fe862f5cce84198ece4736c332ef,
+        type: 3}
+      propertyPath: AvoidDangerZone
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114631777180868210, guid: 89e8fe862f5cce84198ece4736c332ef,
+        type: 3}
+      propertyPath: DangerCheckDistance
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114631777180868210, guid: 89e8fe862f5cce84198ece4736c332ef,
+        type: 3}
+      propertyPath: DangerZoneLayer.m_Bits
+      value: 32768
+      objectReference: {fileID: 0}
+    - target: {fileID: 114975266224184248, guid: 89e8fe862f5cce84198ece4736c332ef,
+        type: 3}
+      propertyPath: Radius
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 114975266224184248, guid: 89e8fe862f5cce84198ece4736c332ef,
+        type: 3}
+      propertyPath: OverlapMaximum
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 114975266224184248, guid: 89e8fe862f5cce84198ece4736c332ef,
+        type: 3}
+      propertyPath: AvoidDangerZone
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114975266224184248, guid: 89e8fe862f5cce84198ece4736c332ef,
+        type: 3}
+      propertyPath: DangerCheckDistance
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114975266224184248, guid: 89e8fe862f5cce84198ece4736c332ef,
+        type: 3}
+      propertyPath: TargetCheckFrequency
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114975266224184248, guid: 89e8fe862f5cce84198ece4736c332ef,
+        type: 3}
+      propertyPath: DangerZoneLayer.m_Bits
+      value: 32768
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -31019,6 +31198,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Label: 
+  AvoidDangerZone: 0
+  DangerZoneLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  DangerCheckDistance: 1
   Radius: 3
   DetectionOriginOffset: {x: 0, y: 0, z: 0}
   TargetLayer:
@@ -47636,6 +47820,51 @@ PrefabInstance:
     - target: {fileID: 4249208751816686, guid: 3d2a551cb5b32194898fd8fb30716e53, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114044659299794826, guid: 3d2a551cb5b32194898fd8fb30716e53,
+        type: 3}
+      propertyPath: AvoidDangerZone
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114044659299794826, guid: 3d2a551cb5b32194898fd8fb30716e53,
+        type: 3}
+      propertyPath: DangerCheckDistance
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114044659299794826, guid: 3d2a551cb5b32194898fd8fb30716e53,
+        type: 3}
+      propertyPath: DangerZoneLayer.m_Bits
+      value: 32768
+      objectReference: {fileID: 0}
+    - target: {fileID: 114225560325155718, guid: 3d2a551cb5b32194898fd8fb30716e53,
+        type: 3}
+      propertyPath: Radius
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 114225560325155718, guid: 3d2a551cb5b32194898fd8fb30716e53,
+        type: 3}
+      propertyPath: OverlapMaximum
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 114225560325155718, guid: 3d2a551cb5b32194898fd8fb30716e53,
+        type: 3}
+      propertyPath: AvoidDangerZone
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114225560325155718, guid: 3d2a551cb5b32194898fd8fb30716e53,
+        type: 3}
+      propertyPath: DangerCheckDistance
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114225560325155718, guid: 3d2a551cb5b32194898fd8fb30716e53,
+        type: 3}
+      propertyPath: TargetCheckFrequency
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114225560325155718, guid: 3d2a551cb5b32194898fd8fb30716e53,
+        type: 3}
+      propertyPath: DangerZoneLayer.m_Bits
+      value: 32768
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -82378,6 +82607,51 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
+    - target: {fileID: 114631777180868210, guid: 89e8fe862f5cce84198ece4736c332ef,
+        type: 3}
+      propertyPath: AvoidDangerZone
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114631777180868210, guid: 89e8fe862f5cce84198ece4736c332ef,
+        type: 3}
+      propertyPath: DangerCheckDistance
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114631777180868210, guid: 89e8fe862f5cce84198ece4736c332ef,
+        type: 3}
+      propertyPath: DangerZoneLayer.m_Bits
+      value: 32768
+      objectReference: {fileID: 0}
+    - target: {fileID: 114975266224184248, guid: 89e8fe862f5cce84198ece4736c332ef,
+        type: 3}
+      propertyPath: Radius
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 114975266224184248, guid: 89e8fe862f5cce84198ece4736c332ef,
+        type: 3}
+      propertyPath: OverlapMaximum
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 114975266224184248, guid: 89e8fe862f5cce84198ece4736c332ef,
+        type: 3}
+      propertyPath: AvoidDangerZone
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114975266224184248, guid: 89e8fe862f5cce84198ece4736c332ef,
+        type: 3}
+      propertyPath: DangerCheckDistance
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114975266224184248, guid: 89e8fe862f5cce84198ece4736c332ef,
+        type: 3}
+      propertyPath: TargetCheckFrequency
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114975266224184248, guid: 89e8fe862f5cce84198ece4736c332ef,
+        type: 3}
+      propertyPath: DangerZoneLayer.m_Bits
+      value: 32768
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -85607,6 +85881,51 @@ PrefabInstance:
     - target: {fileID: 4249208751816686, guid: 3d2a551cb5b32194898fd8fb30716e53, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114044659299794826, guid: 3d2a551cb5b32194898fd8fb30716e53,
+        type: 3}
+      propertyPath: AvoidDangerZone
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114044659299794826, guid: 3d2a551cb5b32194898fd8fb30716e53,
+        type: 3}
+      propertyPath: DangerCheckDistance
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114044659299794826, guid: 3d2a551cb5b32194898fd8fb30716e53,
+        type: 3}
+      propertyPath: DangerZoneLayer.m_Bits
+      value: 32768
+      objectReference: {fileID: 0}
+    - target: {fileID: 114225560325155718, guid: 3d2a551cb5b32194898fd8fb30716e53,
+        type: 3}
+      propertyPath: Radius
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 114225560325155718, guid: 3d2a551cb5b32194898fd8fb30716e53,
+        type: 3}
+      propertyPath: OverlapMaximum
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 114225560325155718, guid: 3d2a551cb5b32194898fd8fb30716e53,
+        type: 3}
+      propertyPath: AvoidDangerZone
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114225560325155718, guid: 3d2a551cb5b32194898fd8fb30716e53,
+        type: 3}
+      propertyPath: DangerCheckDistance
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114225560325155718, guid: 3d2a551cb5b32194898fd8fb30716e53,
+        type: 3}
+      propertyPath: TargetCheckFrequency
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114225560325155718, guid: 3d2a551cb5b32194898fd8fb30716e53,
+        type: 3}
+      propertyPath: DangerZoneLayer.m_Bits
+      value: 32768
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

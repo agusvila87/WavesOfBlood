@@ -529,10 +529,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Label: 
-  AvoidDangerZone: 0
+  AvoidDangerZone: 1
   DangerZoneLayer:
     serializedVersion: 2
-    m_Bits: 16777216
+    m_Bits: 16809984
   DangerCheckDistance: 1.5
   Radius: 50
   DetectionOriginOffset: {x: 0, y: 0, z: 0}
@@ -542,10 +542,10 @@ MonoBehaviour:
   ObstacleDetection: 1
   ObstacleMask:
     serializedVersion: 2
-    m_Bits: 256
-  ObstaclesDetectionMode: 1
+    m_Bits: 33024
+  ObstaclesDetectionMode: 0
   CanTargetSelf: 0
-  TargetCheckFrequency: 1
+  TargetCheckFrequency: 1.5
   OverlapMaximum: 10
 --- !u!114 &114631777180868210
 MonoBehaviour:
