@@ -5497,7 +5497,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3925487840617763692}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 89ee7fe4b0037274d8dba40f605ae049, type: 3}
   m_Name: 
@@ -5924,7 +5924,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ammoTypeA: {fileID: 1592259332214950, guid: 17f3a99d3c23a6047ac3d789f9cca4b3, type: 3}
   ammoTypeB: {fileID: 1218917270543614, guid: bc97e8a1195155247a295247fe4b7f34, type: 3}
-  dropChance: 0.1
+  dropChance: 0.25
 --- !u!114 &1077629832646862223
 MonoBehaviour:
   m_ObjectHideFlags: 0

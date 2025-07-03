@@ -1,47 +1,69 @@
-﻿using UnityEngine;
-using System.Collections;
-using MoreMountains.Tools;
+﻿using MoreMountains.Tools;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace MoreMountains.TopDownEngine
 {
-	/// <summary>
-	/// Add this class to a GameObject to have it play a background music when instanciated.
-	/// Careful : only one background music will be played at a time.
-	/// </summary>
-	[AddComponentMenu("TopDown Engine/Sound/Persistent Background Music")]
-	public class PersistentBackgroundMusic : MMPersistentSingleton<PersistentBackgroundMusic>
-	{
-		/// the background music clip to use as persistent background music
-		[Tooltip("the background music clip to use as persistent background music")]
-		public AudioClip SoundClip;
-		/// whether or not the music should loop
-		[Tooltip("whether or not the music should loop")]
-		public bool Loop = true;
-        
-		protected AudioSource _source;
-		protected PersistentBackgroundMusic _otherBackgroundMusic;
+    [AddComponentMenu("TopDown Engine/Sound/Persistent Background Music")]
+    public class PersistentBackgroundMusic : MMPersistentSingleton<PersistentBackgroundMusic>
+    {
+        [Tooltip("La música del menú y créditos")]
+        public AudioClip MenuMusic;
 
-		protected virtual void OnEnable()
-		{
-			_otherBackgroundMusic = (PersistentBackgroundMusic)FindObjectOfType(typeof(PersistentBackgroundMusic));
-			if ((_otherBackgroundMusic != null) && (_otherBackgroundMusic != this) )
-			{
-				_otherBackgroundMusic.enabled = false;
-			}
-		}
+        [Tooltip("La música de gameplay")]
+        public AudioClip GameplayMusic;
 
-		/// <summary>
-		/// Gets the AudioSource associated to that GameObject, and asks the GameManager to play it.
-		/// </summary>
-		protected virtual void Start()
-		{
-			MMSoundManagerPlayOptions options = MMSoundManagerPlayOptions.Default;
-			options.Loop = Loop;
-			options.Location = Vector3.zero;
-			options.MmSoundManagerTrack = MMSoundManager.MMSoundManagerTracks.Music;
-			options.Persistent = true;
-            
-			MMSoundManagerSoundPlayEvent.Trigger(SoundClip, options);
-		}
-	}
+        [Tooltip("Nombres de escenas donde debe sonar el MenuMusic")]
+        public string[] MenuScenes;
+
+        [Tooltip("Debe hacer loop la música?")]
+        public bool Loop = true;
+
+        public AudioSource _audioSource;
+        private AudioClip _currentClip;
+
+        protected override void Awake()
+        {
+            base.Awake();
+            SceneManager.sceneLoaded += OnSceneLoaded;
+
+            PlayMusicForCurrentScene(SceneManager.GetActiveScene().name);
+        }
+
+        protected virtual void OnDestroy()
+        {
+            SceneManager.sceneLoaded -= OnSceneLoaded;
+        }
+
+        protected void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+        {
+            PlayMusicForCurrentScene(scene.name);
+        }
+
+        protected void PlayMusicForCurrentScene(string sceneName)
+        {
+            AudioClip targetClip = IsMenuScene(sceneName) ? MenuMusic : GameplayMusic;
+
+            if (_currentClip == targetClip)
+                return;
+
+            _currentClip = targetClip;
+
+            _audioSource.Stop();
+            _audioSource.clip = _currentClip;
+            _audioSource.loop = Loop;
+            _audioSource.Play();
+        }
+
+        protected bool IsMenuScene(string sceneName)
+        {
+            foreach (string name in MenuScenes)
+            {
+                if (name == sceneName)
+                    return true;
+            }
+            return false;
+        }
+    }
 }
+

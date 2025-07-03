@@ -10707,7 +10707,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ammoTypeA: {fileID: 1592259332214950, guid: 17f3a99d3c23a6047ac3d789f9cca4b3, type: 3}
   ammoTypeB: {fileID: 1218917270543614, guid: bc97e8a1195155247a295247fe4b7f34, type: 3}
-  dropChance: 0.1
+  dropChance: 0.35
 --- !u!114 &3160651771420576077
 MonoBehaviour:
   m_ObjectHideFlags: 0

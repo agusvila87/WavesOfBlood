@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using MoreMountains.TopDownEngine;
 using MoreMountains.Tools;
 
@@ -11,7 +11,7 @@ public class EnemyResetOnEnable : MonoBehaviour
     private void Awake()
     {
         _health = GetComponent<Health>();
-        _controller = GetComponent<TopDownController>();
+        _controller = GetComponent<TopDownController>(); // puede ser null
         _brain = GetComponent<AIBrain>();
     }
 
@@ -23,11 +23,16 @@ public class EnemyResetOnEnable : MonoBehaviour
             _health.ResetHealthToMaxHealth();
         }
 
-        if (_controller != null)
+        //if (_controller != null)
+        //{
+        //    Debug.Log($"[EnemyResetOnEnable] Controlador activo en {gameObject.name}");
+        //    _controller.CollisionsOn();
+        //    _controller.SetKinematic(false);
+        //    _controller.Reset();
+        //}
+        else
         {
-            _controller.CollisionsOn();
-            _controller.SetKinematic(false);
-            _controller.Reset();
+            Debug.LogWarning($"[EnemyResetOnEnable] ⚠️ No se encontró TopDownController en {gameObject.name}. ¿Está faltando?");
         }
 
         if (_brain != null)
@@ -36,3 +41,4 @@ public class EnemyResetOnEnable : MonoBehaviour
         }
     }
 }
+
